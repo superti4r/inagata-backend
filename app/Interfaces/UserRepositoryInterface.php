@@ -1,0 +1,21 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Interfaces;
+
+use App\Models\User;
+
+interface UserRepositoryInterface
+{
+    /**
+     * @param  array<string, mixed>  $attributes
+     */
+    public function create(array $attributes): User;
+
+    public function findByEmail(string $email): ?User;
+
+    public function issueToken(User $user, string $tokenName): string;
+
+    public function revokeCurrentToken(User $user): void;
+}

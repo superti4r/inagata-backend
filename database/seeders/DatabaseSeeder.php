@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use App\Models\User;
@@ -15,11 +17,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $admin = User::factory()->make([
+            'name' => 'Admin User',
+            'email' => 'admin@example.com',
+            'role' => 'admin',
+        ])->toArray();
 
-        User::factory()->create([
+        $user = User::factory()->make([
             'name' => 'Test User',
             'email' => 'test@example.com',
-        ]);
+            'role' => 'user',
+        ])->toArray();
+
+        User::query()->updateOrCreate(['email' => 'admin@example.com'], $admin);
+        User::query()->updateOrCreate(['email' => 'test@example.com'], $user);
     }
 }

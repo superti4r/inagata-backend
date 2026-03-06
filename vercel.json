@@ -19,6 +19,8 @@
     "APP_PACKAGES_CACHE": "/tmp/packages.php",
     "APP_ROUTES_CACHE": "/tmp/routes.php",
     "APP_SERVICES_CACHE": "/tmp/services.php",
+    "L5_SWAGGER_USE_ABSOLUTE_PATH": "false",
+    "L5_SWAGGER_GENERATE_ALWAYS": "false",
     "LOG_CHANNEL": "stderr",
     "CACHE_STORE": "array",
     "SESSION_DRIVER": "array",

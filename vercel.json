@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.9.0"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/vercel/index.php"
+    }
+  ],
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "false",
+    "LOG_CHANNEL": "stderr",
+    "CACHE_STORE": "array",
+    "SESSION_DRIVER": "array",
+    "VIEW_COMPILED_PATH": "/tmp/views"
+  }
+}

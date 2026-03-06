@@ -91,6 +91,10 @@ php artisan l5-swagger:generate
 
 Catatan: file hasil generate Swagger disimpan di `storage/api-docs` dan tidak ditrack ke repository.
 
+## Video Demo
+
+- https://drive.google.com/file/d/1boPjRRVPEysNpSJqwlBYQqjYoe9vrlGV/view?usp=sharing
+
 ## Alur Auth Singkat
 
 1) Login via `POST /api/login`.

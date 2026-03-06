@@ -11,17 +11,17 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        $adminData = User::factory()->make([
+        $adminData = User::factory()->raw([
             'name' => 'Admin User',
             'email' => 'admin@example.com',
             'role' => 'admin',
-        ])->toArray();
+        ]);
 
-        $defaultUserData = User::factory()->make([
+        $defaultUserData = User::factory()->raw([
             'name' => 'Test User',
             'email' => 'test@example.com',
             'role' => 'user',
-        ])->toArray();
+        ]);
 
         User::query()->updateOrCreate(['email' => 'admin@example.com'], $adminData);
         User::query()->updateOrCreate(['email' => 'test@example.com'], $defaultUserData);

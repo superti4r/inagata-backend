@@ -2,9 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get("/", function () {
-    return response()->json([
-        "message" => "Welcome to Inagata RESTful API Technical Test",
-        "documentation" => url("/api/docs"),
-    ]);
-});
+Route::redirect("/","/api/documentation");
